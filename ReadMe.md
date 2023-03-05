@@ -1,2 +1,2 @@
 # README file
-![alt text](tipcalculator.gif)
+![alt text](filname.gif)
