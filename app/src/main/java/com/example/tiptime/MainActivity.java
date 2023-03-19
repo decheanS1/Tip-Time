@@ -2,6 +2,7 @@ package com.example.tiptime;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isRoundTip;
 
     private double tipAmount;
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         choices = findViewById(R.id.radioGroup);
         aSwitch = findViewById(R.id.switch1);
         textView = findViewById(R.id.tipAmount);
+
+        btn = findViewById(R.id.practiceBtn);
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
